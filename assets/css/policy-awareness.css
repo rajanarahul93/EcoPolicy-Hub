@@ -1,0 +1,254 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #eef2f5;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Header Navigation - Sticky with Shadow */
+header {
+    background-color: #4CAF50;
+    padding: 15px 0;
+    color: white;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #388E3C;
+    color: #ffd700;
+}
+
+/* Hero Section - Full Width with Gradient */
+.hero {
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* Policy Section Container */
+.policy-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Policy Section Boxes */
+.policy-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.policy-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.policy-content h2 {
+    font-size: 2rem;
+    color: #2E7D32;
+    margin-bottom: 15px;
+}
+
+.policy-content p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+/* Stylish List Items */
+.policy-content ul {
+    padding-left: 20px;
+}
+
+.policy-content li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.policy-content li::before {
+    content: "✔";
+    color: #4CAF50;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 3px;
+    font-size: 1.2rem;
+}
+
+/* Call-to-Action Section */
+.take-action {
+    background: linear-gradient(135deg, #2E7D32, #4CAF50);
+    color: white;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.take-action h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.take-action p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: auto;
+}
+
+.take-action ul {
+    margin-top: 15px;
+    text-align: left;
+    display: inline-block;
+}
+
+.take-action li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/* Call-to-Action Button */
+.button {
+    display: inline-block;
+    background-color: #FFD700;
+    color: #2E7D32;
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    margin-top: 15px;
+}
+
+.button:hover {
+    background-color: #ffcc00;
+    transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+footer a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Smooth Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply Animation */
+.hero, .policy-content, .take-action {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .policy-container {
+        width: 95%;
+    }
+
+    .policy-content {
+        padding: 20px;
+    }
+
+    .take-action {
+        padding: 25px;
+    }
+}

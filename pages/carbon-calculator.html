@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Calculator</title>
+    <link rel="stylesheet" href="../assets/css/carbon-calculator.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="data-analysis.html">GHG Emissions</a></li>
+                <li><a href="carbon-calculator.html">Carbon Calculator</a></li>
+                <li><a href="policy-awareness.html">Policy Awareness</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Calculator Section -->
+    <section class="calculator">
+        <h1>Calculate Your Carbon Footprint</h1>
+        <form id="carbonForm">
+            <label for="energy">Energy Consumption (kWh/month):</label>
+            <input type="number" id="energy" name="energy" required>
+
+            <label for="transport">Transport (km/month):</label>
+            <input type="number" id="transport" name="transport" required>
+
+            <label for="waste">Waste (kg/month):</label>
+            <input type="number" id="waste" name="waste" required>
+
+            <button type="submit">Calculate</button>
+        </form>
+        <div id="result" class="hidden">
+            <h2>Your Carbon Footprint</h2>
+            <p id="footprintResult"></p>
+            <p id="suggestions"></p>
+        </div>
+    </section>
+
+    <!-- Carbon Footprint Ranges -->
+    <section class="footprint-ranges">
+        <h2>What Your Carbon Footprint Means</h2>
+        <ul>
+            <li><strong>Low (0-100 kg CO₂/month):</strong> Excellent! Your footprint is below average. Keep up eco-friendly habits.</li>
+            <li><strong>Moderate (101-500 kg CO₂/month):</strong> Good, but there’s room for improvement. Try reducing car travel and switching to renewable energy.</li>
+            <li><strong>High (501-1000 kg CO₂/month):</strong> Your footprint is above the average. Consider reducing energy use and optimizing waste management.</li>
+            <li><strong>Very High (>1000 kg CO₂/month):</strong> Your emissions are significantly high. Immediate action is needed to lower energy consumption, use public transport, and adopt sustainable practices.</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Climate Awareness Initiative | <a href="#">Privacy Policy</a></p>
+    </footer>
+
+    <script src="../assets/js/carbon-calculator.js"></script>
+</body>
+</html>
